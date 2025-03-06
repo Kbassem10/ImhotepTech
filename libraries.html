@@ -2,121 +2,304 @@
 <html lang="en">
 
 <head>
-    <title>Imhotep Tech - Custom Software Development & Web Applications</title>
+    <title>Imhotep Tech - Libraries & APIs</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Stylesheets and Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Tailwind CSS and other dependencies -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="static/app.css"> <!-- Adjusted to static file -->
-    <link rel="shortcut icon" href="static/it.ico"> <!-- Adjusted to static file -->
+    <link rel="shortcut icon" href="static/it.ico">
 
     <!-- SEO and Meta -->
-    <meta name="description" content="Imhotep Tech - Custom software and web application development services. Contact us to streamline your business.">
-    <meta name="keywords" content="custom software development, web application, Egypt, Imhotep Tech, small business solutions, clinic software, currency converter, financial manager app">
-    <meta property="og:title" content="Imhotep Tech - Custom Software Development & Web Applications">
-    <meta property="og:description" content="We develop custom software & web applications to streamline your business operations. Contact us now!">
+    <meta name="description" content="Imhotep Tech - Open-source libraries and APIs for developers. Free to use and contribute.">
+    <meta name="keywords" content="custom software development, web application, Egypt, Imhotep Tech, libraries, APIs, open source">
+    <meta property="og:title" content="Imhotep Tech - Libraries & APIs">
+    <meta property="og:description" content="Explore our open-source libraries and APIs for your next project.">
     <meta property="og:image" content="https://imhoteptech.vercel.app/static/it.png">
-    <meta property="og:url" content="https://imhoteptech.vercel.app">
-    <link rel="canonical" href="https://imhoteptech.vercel.app/">
+    <meta property="og:url" content="https://imhoteptech.vercel.app/libraries.html">
+    <link rel="canonical" href="https://imhoteptech.vercel.app/libraries.html">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Imhotep Tech">
     <meta name="google-site-verification" content="5VWhaKmsV5Wzrdko3_Si5vVnmNsMDttsJFA04mFxrsE" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2e3b4b',
+                        secondary: '#ffdd57',
+                        accent: '#007bff',
+                        dark: '#1a202c',
+                        light: '#f7fafc'
+                    },
+                },
+            },
+        };
+    </script>
 </head>
 
-<body>
-     <!-- Navbar -->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">Imhotep Tech</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="/libraries.html" class="nav-link">Libraries / APIs</a> <!-- Changed to .html -->
-                    </li>
-                    <li class="nav-item">
-                        <a href="/about_me.html" class="nav-link">The Founder</a> <!-- Changed to .html -->
-                    </li>
-                    <li class="nav-item">
-                        <a href="/social_media.html" class="nav-link">Social Media</a> <!-- Changed to .html -->
-                    </li>
-                </ul>
+<body class="bg-gradient-to-b from-primary to-dark text-white font-sans">
+    <!-- Navbar -->
+    <nav class="bg-primary/90 backdrop-blur-sm sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <a href="/" class="text-2xl font-bold text-white flex items-center space-x-2 group">
+                    <span class="bg-secondary text-primary p-1 rounded transform group-hover:rotate-12 transition-transform duration-300">IT</span>
+                    <span class="group-hover:text-secondary transition-colors duration-300">Imhotep Tech</span>
+                </a>
+                
+                <div class="hidden md:flex space-x-6">
+                    <a href="/libraries.html" class="text-secondary hover:text-secondary transition-colors duration-300 hover:underline">Libraries / APIs</a>
+                    <a href="/about_me.html" class="text-gray-300 hover:text-secondary transition-colors duration-300 hover:underline">The Founder</a>
+                    <a href="/social_media.html" class="text-gray-300 hover:text-secondary transition-colors duration-300 hover:underline">Social Media</a>
+                </div>
+                
+                <button class="md:hidden text-white focus:outline-none" id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="hidden md:hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 py-4">
+                    <a href="/libraries.html" class="text-secondary hover:text-secondary">Libraries / APIs</a>
+                    <a href="/about_me.html" class="text-gray-300 hover:text-secondary">The Founder</a>
+                    <a href="/social_media.html" class="text-gray-300 hover:text-secondary">Social Media</a>
+                </div>
             </div>
         </div>
     </nav>
-    
-    <div class="container mt-5">
-        <h1 class="text-center mb-4">Imhotep Libraries / APIs</h1>
-        <div class="row">
-            <div class="col-md-6 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h2 class="card-title">Imhotep Files Flask</h2>
-                        <p class="card-text">This Python library simplifies file upload and deletion operations in web applications using Flask or similar frameworks.</p>
-                        <a href="https://github.com/Imhotep-Tech/imhotep_files_flask" class="btn btn-outline-dark" target="_blank">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
+
+    <!-- Hero Section -->
+    <div class="relative bg-gradient-to-br from-primary via-primary/70 to-dark">
+        <!-- Animated background elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-10 -left-10 w-40 h-40 bg-accent/20 rounded-full blur-3xl"></div>
+            <div class="absolute top-20 right-20 w-72 h-72 bg-secondary/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 left-1/3 w-56 h-56 bg-purple-500/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 py-16 md:py-24 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-secondary to-white bg-clip-text text-transparent">
+                    Open Source Libraries & APIs
+                </h1>
+                <p class="text-lg md:text-xl mb-6 text-gray-200">
+                    Free to use, built with ❤️ by Imhotep Tech
+                </p>
+                <a href="https://github.com/Imhotep-Tech" target="_blank" 
+                   class="px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-full font-bold text-lg 
+                          shadow-lg flex items-center gap-2 mx-auto w-fit
+                          transform hover:-translate-y-1 transition-all duration-300">
+                    <i class="fab fa-github"></i>
+                    Explore on GitHub
+                </a>
+            </div>
+        </div>
+        
+        <!-- Wave separator -->
+        <div class="relative h-24">
+            <svg class="absolute bottom-0 w-full h-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#1a202c" fill-opacity="1" d="M0,160L60,149.3C120,139,240,117,360,128C480,139,600,181,720,181.3C840,181,960,139,1080,122.7C1200,107,1320,117,1380,122.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="bg-dark">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Imhotep Files Flask -->
+                <div class="group bg-primary/30 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl border border-gray-700 hover:border-secondary/50 transform hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-file-upload text-3xl text-secondary mr-3"></i>
+                            <h2 class="text-2xl font-bold text-white">Imhotep Files Flask</h2>
+                        </div>
+                        <p class="text-gray-300 mb-6">
+                            This Python library simplifies file upload and deletion operations in web applications using Flask or similar frameworks.
+                            Perfect for developers looking to handle file operations efficiently.
+                        </p>
+                        <div class="flex flex-wrap gap-3 mt-auto">
+                            <a href="https://github.com/Imhotep-Tech/imhotep_files_flask" target="_blank" 
+                               class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium text-sm 
+                                      shadow-md transition-all duration-200 flex items-center gap-2">
+                                <i class="fab fa-github"></i> 
+                                View on GitHub
+                            </a>
+                            <a href="https://pypi.org/project/imhotep-files-flask/" target="_blank" 
+                               class="px-4 py-2 bg-accent hover:bg-accent/80 text-white rounded-lg font-medium text-sm 
+                                      shadow-md transition-all duration-200 flex items-center gap-2">
+                                <i class="fab fa-python"></i>
+                                PyPI Package
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800/50 p-3 mt-4">
+                        <code class="text-xs text-gray-300">pip install imhotep-files-flask</code>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h2 class="card-title">Imhotep Mail</h2>
-                        <p class="card-text">This is a simple Python library for sending emails. It provides an easy way to configure and send emails from any Python code.</p>
-                        <a href="https://github.com/Imhotep-Tech/imhotep_mail" class="btn btn-outline-dark" target="_blank">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
+                
+                <!-- Imhotep Mail -->
+                <div class="group bg-primary/30 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl border border-gray-700 hover:border-secondary/50 transform hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-envelope text-3xl text-secondary mr-3"></i>
+                            <h2 class="text-2xl font-bold text-white">Imhotep Mail</h2>
+                        </div>
+                        <p class="text-gray-300 mb-6">
+                            This is a simple Python library for sending emails. It provides an easy way to configure and send emails from any Python code.
+                            Streamline your email sending process with minimal configuration.
+                        </p>
+                        <div class="flex flex-wrap gap-3 mt-auto">
+                            <a href="https://github.com/Imhotep-Tech/imhotep_mail" target="_blank" 
+                               class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium text-sm 
+                                      shadow-md transition-all duration-200 flex items-center gap-2">
+                                <i class="fab fa-github"></i> 
+                                View on GitHub
+                            </a>
+                            <a href="https://pypi.org/project/imhotep-mail/" target="_blank" 
+                               class="px-4 py-2 bg-accent hover:bg-accent/80 text-white rounded-lg font-medium text-sm 
+                                      shadow-md transition-all duration-200 flex items-center gap-2">
+                                <i class="fab fa-python"></i>
+                                PyPI Package
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800/50 p-3 mt-4">
+                        <code class="text-xs text-gray-300">pip install imhotep-mail</code>
                     </div>
                 </div>
+                
+                <!-- Imhotep Exchange Rates API -->
+                <div class="group bg-primary/30 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl border border-gray-700 hover:border-secondary/50 transform hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-money-bill-wave text-3xl text-secondary mr-3"></i>
+                            <h2 class="text-2xl font-bold text-white">Imhotep Exchange Rates API</h2>
+                        </div>
+                        <p class="text-gray-300 mb-6">
+                            This API is simply a currency conversion API with unlimited requests, free to use, and updates every 24 hours.
+                            Perfect for applications requiring currency conversion functionality.
+                        </p>
+                        <div class="flex flex-wrap gap-3 mt-auto">
+                            <a href="https://github.com/Imhotep-Tech/imhotep_currency_rates_api" target="_blank" 
+                               class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium text-sm 
+                                      shadow-md transition-all duration-200 flex items-center gap-2">
+                                <i class="fab fa-github"></i> 
+                                View on GitHub
+                            </a>
+                            <a href="https://imhotepexchangeratesapi.pythonanywhere.com/" target="_blank" 
+                               class="px-4 py-2 bg-accent hover:bg-accent/80 text-white rounded-lg font-medium text-sm 
+                                      shadow-md transition-all duration-200 flex items-center gap-2">
+                                <i class="fas fa-external-link-alt"></i>
+                                Visit API
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800/50 p-3 mt-4">
+                        <code class="text-xs text-gray-300">https://imhotepexchangeratesapi.pythonanywhere.com/api/v1/rates</code>
+                    </div>
+                </div>
+
             </div>
-            <div class="col-md-6 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h2 class="card-title">Imhotep Exchange Rates API</h2>
-                        <p class="card-text">This API is Simply a currency conversion API with Unlimited Requests, free to use, update every 24 hours.</p>
-                        <a href="https://github.com/Imhotep-Tech/imhotep_currency_rates_api" class="btn btn-outline-dark" target="_blank">
-                            <i class="fab fa-github"></i> View on GitHub
+        </div>
+    </div>
+
+    <!-- Integration Section -->
+    <div class="bg-gradient-to-r from-primary to-dark py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-10 text-center text-secondary">How to Integrate</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-primary/40 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-700">
+                    <div class="bg-secondary/20 h-12 w-12 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-secondary font-bold text-xl">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Install</h3>
+                    <p class="text-gray-300">
+                        Use pip to install our Python packages or reference our API endpoints in your application.
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="bg-primary/40 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-700">
+                    <div class="bg-secondary/20 h-12 w-12 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-secondary font-bold text-xl">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Configure</h3>
+                    <p class="text-gray-300">
+                        Follow our simple documentation to configure the library or API for your specific use case.
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="bg-primary/40 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-700">
+                    <div class="bg-secondary/20 h-12 w-12 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-secondary font-bold text-xl">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Implement</h3>
+                    <p class="text-gray-300">
+                        Start using the library functions or API endpoints in your code to enhance your application.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="mailto:imhoteptech@outlook.com" 
+                   class="px-8 py-4 bg-secondary text-primary hover:bg-secondary/90 rounded-full font-bold text-lg 
+                          shadow-lg hover:shadow-secondary/30 transform hover:-translate-y-1 transition-all duration-300">
+                    Need Help? Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark border-t border-gray-800 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <span class="bg-secondary text-primary p-1 rounded mr-2">IT</span>
+                        <span class="text-xl font-bold text-white">Imhotep Tech</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        &copy; 2023-2025 Imhotep Tech. All rights reserved.
+                    </p>
+                </div>
+                <div class="md:text-right">
+                    <h3 class="text-lg font-semibold text-white mb-4">Connect with us</h3>
+                    <div class="flex md:justify-end gap-4">
+                        <a href="mailto:imhoteptech@outlook.com" class="text-gray-400 hover:text-white transition-colors duration-200">
+                            <i class="fa fa-envelope fa-lg"></i>
                         </a>
-                        
-                        <a href="https://imhotepexchangeratesapi.pythonanywhere.com/" class="btn btn-outline-dark ms-2" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Visit Website
+                        <a href="https://www.instagram.com/imhotep_tech?igsh=YXV0Y24xZnNveDQ5" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-200">
+                            <i class="fab fa-instagram fa-lg"></i>
+                        </a>
+                        <a href="https://x.com/Imhoteptech1?t=E5JmfSp5WpyZaWkDzILpKw&s=09" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-200">
+                            <i class="fab fa-twitter fa-lg"></i>
+                        </a>
+                        <a href="https://github.com/Imhotep-Tech" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-200">
+                            <i class="fab fa-github fa-lg"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-        <!-- Footer -->
-        <footer class="mt-5 p-4 bg-dark text-white text-center">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>&copy; 2023-2025 Imhotep Tech. All rights reserved.</p>
-                </div>
-                <div class="col-md-6">
-                    <div class="d-flex justify-content-end align-items-center">
-                        <p class="mb-0">Contact us:</p>
-                        <a href="mailto:imhoteptech@outlook.com" class="footer-icon">
-                            <i class="fa fa-envelope"></i>
-                        </a>
-                        <a href="https://www.instagram.com/imhotep_tech?igsh=YXV0Y24xZnNveDQ5" target="_blank" class="footer-icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://x.com/Imhoteptech1?t=E5JmfSp5WpyZaWkDzILpKw&s=09" target="_blank" class="footer-icon">
-                            <i class="fab fa-twitter"></i> 
-                        </a>
-                        <a href="https://github.com/Imhotep-Tech" target="_blank" class="footer-icon">
-                            <i class="fab fa-github"></i> 
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </footer>
+    </footer>
+
+    <!-- Mobile menu script -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
