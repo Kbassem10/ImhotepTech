@@ -1,598 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/it.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Imhotep Tech - Custom Software Development & Web Applications | Egypt</title>
+    <meta name="title" content="Imhotep Tech - Custom Software Development & Web Applications | Egypt" />
+    <meta name="description" content="Leading software development company in Egypt. Custom web applications, Python/Django development, React solutions. 15+ successful projects delivered. Contact us for your business automation needs." />
+    <meta name="keywords" content="custom software development, web application development, Egypt software company, Django development, React development, Python developer Egypt, business automation, clinic software, financial management app, Imhotep Tech, software solutions Egypt, web development Cairo" />
+    <meta name="author" content="Imhotep Tech - Karim Bassem Joseph" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="distribution" content="global" />
+    <meta name="rating" content="general" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Imhotep Tech" />
+    <meta property="og:url" content="https://imhoteptech.vercel.app/" />
+    <meta property="og:title" content="Imhotep Tech - Custom Software Development & Web Applications" />
+    <meta property="og:description" content="Leading software development company in Egypt. We develop custom software & web applications to streamline your business operations. 15+ successful projects delivered." />
+    <meta property="og:image" content="https://imhoteptech.vercel.app/it.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Imhotep Tech - Custom Software Development Company" />
+    <meta property="og:locale" content="en_US" />
 
-<head>
-    <title>Imhotep Tech - Custom Software Development & Web Applications</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Imhoteptech1" />
+    <meta name="twitter:creator" content="@Imhoteptech1" />
+    <meta name="twitter:url" content="https://imhoteptech.vercel.app/" />
+    <meta name="twitter:title" content="Imhotep Tech - Custom Software Development & Web Applications" />
+    <meta name="twitter:description" content="Leading software development company in Egypt. Custom web applications, business automation solutions. Contact us today!" />
+    <meta name="twitter:image" content="https://imhoteptech.vercel.app/it.png" />
+    <meta name="twitter:image:alt" content="Imhotep Tech Logo" />
 
-    <!-- Tailwind CSS and other dependencies -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="shortcut icon" href="static/it.ico">
-
-    <!-- SEO and Meta -->
-    <meta name="description" content="Imhotep Tech - Custom software and web application development services. Contact us to streamline your business.">
-    <meta name="keywords" content="custom software development, web application, Egypt, Imhotep Tech, small business solutions, clinic software, currency converter, financial manager app">
-    <meta property="og:title" content="Imhotep Tech - Custom Software Development & Web Applications">
-    <meta property="og:description" content="We develop custom software & web applications to streamline your business operations. Contact us now!">
-    <meta property="og:image" content="https://imhoteptech.vercel.app/static/it.png">
-    <meta property="og:url" content="https://imhoteptech.vercel.app">
-    <link rel="canonical" href="https://imhoteptech.vercel.app/">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Imhotep Tech">
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#ffdd57" />
+    <meta name="msapplication-TileColor" content="#ffdd57" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://imhoteptech.vercel.app/" />
+    
+    <!-- Alternate Languages (if you plan to add Arabic) -->
+    <link rel="alternate" hreflang="en" href="https://imhoteptech.vercel.app/" />
+    <link rel="alternate" hreflang="x-default" href="https://imhoteptech.vercel.app/" />
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+    
+    <!-- Search Engine Verification -->
     <meta name="google-site-verification" content="5VWhaKmsV5Wzrdko3_Si5vVnmNsMDttsJFA04mFxrsE" />
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#2e3b4b',
-                        secondary: '#ffdd57',
-                        accent: '#007bff',
-                        dark: '#1a202c',
-                        light: '#f7fafc'
-                    },
-                },
-            },
-        };
+    <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE" />
+    <meta name="yandex-verification" content="YOUR_YANDEX_VERIFICATION_CODE" />
+    
+    <!-- Structured Data for Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Imhotep Tech",
+      "url": "https://imhoteptech.vercel.app",
+      "logo": "https://imhoteptech.vercel.app/it.png",
+      "description": "Leading software development company in Egypt specializing in custom web applications and business automation solutions.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "EG",
+        "addressLocality": "Cairo"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "imhoteptech@outlook.com",
+        "contactType": "customer service"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Karim Bassem Joseph"
+      },
+      "sameAs": [
+        "https://github.com/Imhotep-Tech",
+        "https://www.instagram.com/imhotep_tech",
+        "https://x.com/Imhoteptech1",
+        "https://www.linkedin.com/in/karimbassem"
+      ]
+    }
     </script>
-</head>
 
-<body class="bg-gradient-to-b from-primary to-dark text-white font-sans">
-    <!-- Navbar -->
-    <nav class="bg-primary/90 backdrop-blur-sm sticky top-0 z-50 shadow-lg">
-        <div class="container mx-auto px-4">
-            <div class="flex items-center justify-between py-4">
-                <a href="/" class="text-2xl font-bold text-white flex items-center space-x-2 group">
-                    <span class="bg-secondary text-primary p-1 rounded transform group-hover:rotate-12 transition-transform duration-300">IT</span>
-                    <span class="group-hover:text-secondary transition-colors duration-300">Imhotep Tech</span>
-                </a>
-                
-                <div class="hidden md:flex space-x-6">
-                    <a href="/libraries.html" class="text-gray-300 hover:text-secondary transition-colors duration-300 hover:underline">Libraries / APIs</a>
-                    <a href="/about_me.html" class="text-gray-300 hover:text-secondary transition-colors duration-300 hover:underline">The Founder</a>
-                    <a href="/social_media.html" class="text-gray-300 hover:text-secondary transition-colors duration-300 hover:underline">Social Media</a>
-                </div>
-                
-                <button class="md:hidden text-white focus:outline-none" id="mobile-menu-button">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-            
-            <div class="hidden md:hidden" id="mobile-menu">
-                <div class="flex flex-col space-y-4 py-4">
-                    <a href="/libraries.html" class="text-gray-300 hover:text-secondary">Libraries / APIs</a>
-                    <a href="/about_me.html" class="text-gray-300 hover:text-secondary">The Founder</a>
-                    <a href="/social_media.html" class="text-gray-300 hover:text-secondary">Social Media</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <div class="relative bg-gradient-to-br from-primary via-primary/70 to-dark">
-        <!-- Animated background elements -->
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute -top-10 -left-10 w-40 h-40 bg-accent/20 rounded-full blur-3xl"></div>
-            <div class="absolute top-20 right-20 w-72 h-72 bg-secondary/10 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-10 left-1/3 w-56 h-56 bg-purple-500/10 rounded-full blur-3xl"></div>
-        </div>
-        
-        <div class="container mx-auto px-4 py-24 md:py-32 relative z-10">
-            <div class="text-center max-w-3xl mx-auto">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-secondary to-white bg-clip-text text-transparent">
-                    Imhotep Tech
-                </h1>
-                <p class="text-xl md:text-2xl mb-10 text-gray-200 italic">
-                    Win in your mind and you will win in reality
-                </p>
-                <a href="mailto:imhoteptech@outlook.com" 
-                   class="px-8 py-4 bg-accent hover:bg-accent/80 text-white rounded-full font-bold text-lg 
-                          shadow-lg hover:shadow-accent/50 transform hover:-translate-y-1 transition-all duration-300">
-                    Contact Us Today
-                </a>
-            </div>
-        </div>
-        
-        <!-- Wave separator -->
-        <div class="relative h-24">
-            <svg class="absolute bottom-0 w-full h-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill="#1a202c" fill-opacity="1" d="M0,160L60,149.3C120,139,240,117,360,128C480,139,600,181,720,181.3C840,181,960,139,1080,122.7C1200,107,1320,117,1380,122.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
-            </svg>
-        </div>
-    </div>
-
-    <!-- Main Content -->
-    <div class="bg-dark">
-        <div class="container mx-auto px-4 py-16">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                <!-- About Section -->
-                <div class="lg:col-span-4 space-y-6">
-                    <div class="bg-primary/50 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-700 hover:border-secondary/50 transition-all duration-300">
-                        <h2 class="text-2xl font-bold mb-6 text-secondary">About Imhotep Tech</h2>
-                        <div class="flex justify-center mb-6">
-                            <img src="static/it.png" class="w-40 h-40 rounded-full border-4 border-secondary object-cover shadow-lg" alt="Imhotep Tech - Custom Software Development" loading="lazy">
-                        </div>
-                        <p class="text-gray-300 leading-relaxed">
-                            Imhotep Tech is a pioneering software development firm based in Egypt. 
-                            We specialize in crafting innovative software solutions tailored to meet 
-                            the diverse needs of our clients.
-                        </p>
-                    </div>
-                    
-                    <!-- Tech stack section -->
-                    <div class="bg-primary/30 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-700">
-                        <h3 class="text-xl font-bold mb-4 text-secondary">Our Tech Stack</h3>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="px-3 py-1 bg-blue-900/50 rounded-full text-sm">Python</span>
-                            <span class="px-3 py-1 bg-green-900/50 rounded-full text-sm">Django</span>
-                            <span class="px-3 py-1 bg-red-900/50 rounded-full text-sm">Flask</span>
-                            <span class="px-3 py-1 bg-yellow-900/50 rounded-full text-sm">JavaScript</span>
-                            <span class="px-3 py-1 bg-cyan-900/50 rounded-full text-sm">React</span>
-                            <span class="px-3 py-1 bg-pink-900/50 rounded-full text-sm">Tailwind</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Section -->
-                <div class="lg:col-span-8 space-y-12">
-                    <h2 class="text-3xl font-bold mb-8 text-center text-secondary">Our Projects</h2>
-                    
-                    <!-- Imhotep Financial Manager v7 -->
-                    <div class="group bg-primary/30 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl border border-gray-700 hover:border-secondary/50 transform hover:-translate-y-1 transition-all duration-300">
-                        <div class="md:flex">
-                            <!-- Project Image -->
-                            <div class="md:w-1/3 p-6 flex items-center justify-center">
-                                <img src="static/imhotep_finance.png" class="w-40 h-40 object-cover rounded-xl shadow-lg group-hover:scale-105 transition-all duration-300" alt="Imhotep Financial Manager v7 App" loading="lazy">
-                            </div>
-                            <!-- Project Details -->
-                            <div class="md:w-2/3 p-6">
-                                <div class="flex justify-between items-center mb-3">
-                                    <h3 class="text-2xl font-bold text-white">
-                                        <a href="https://imhotep-finance.vercel.app/" target="_blank" class="hover:text-secondary transition-colors duration-300">
-                                            Imhotep Financial Manager
-                                        </a>
-                                    </h3>
-                                    <span class="text-xs bg-accent/30 text-white px-2 py-1 rounded">Aug 31, 2025</span>
-                                </div>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    Take control of your finances with <strong>Imhotep Financial Manager v7</strong>! Built with Django & React, it offers:
-                                    <ul class="list-disc list-inside mt-2">
-                                        <li>Smart category suggestions 🧠</li>
-                                        <li>Advanced analytics & interactive dashboards 📊</li>
-                                        <li>Automated scheduled transactions 🗓️</li>
-                                        <li>CSV export & performance optimizations 🚀</li>
-                                        <li>Fully responsive, secure, and modern UI</li>
-                                    </ul>
-                                </div>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="text-xs bg-green-900/50 px-2 py-1 rounded-full">Django</span>
-                                    <span class="text-xs bg-cyan-900/50 px-2 py-1 rounded-full">React</span>
-                                    <span class="text-xs bg-pink-900/50 px-2 py-1 rounded-full">Tailwind CSS</span>
-                                    <span class="text-xs bg-gray-800/50 px-2 py-1 rounded-full">PostgreSQL</span>
-                                    <span class="text-xs bg-blue-400/50 px-2 py-1 rounded-full">Docker</span>
-                                </div>
-                                <div class="flex flex-wrap gap-3">
-                                    <a href="https://imhotep-finance.vercel.app/" target="_blank" 
-                                       class="px-4 py-2 bg-accent hover:bg-accent/80 text-white rounded-lg font-medium text-sm 
-                                              shadow-md transition-all duration-200 flex items-center gap-2">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        Try Live
-                                    </a>
-                                    <a href="https://github.com/Imhotep-Tech/imhotep_finance" target="_blank" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium text-sm shadow-md transition-all duration-200 flex items-center gap-2">
-                                        <i class="fab fa-github"></i> 
-                                        View on GitHub
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Pharaohfolio - Simple hosting for single-page portfolios -->
-                    <div class="group bg-primary/30 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl border border-gray-700 hover:border-secondary/50 transform hover:-translate-y-1 transition-all duration-300">
-                        <div class="md:flex">
-                            <div class="md:w-1/3 p-6 flex items-center justify-center">
-                                <img src="static/PharaohfolioLogo.png" class="w-40 h-40 object-cover rounded-xl shadow-lg group-hover:scale-105 transition-all duration-300" alt="Pharaohfolio - Simple hosting for single-page portfolios" loading="lazy" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/Imhotep-Tech/Pharaohfolio/main/frontend/public/pharaohfolio-logo.png'">
-                            </div>
-                            <div class="md:w-2/3 p-6">
-                                <div class="flex justify-between items-center mb-3">
-                                    <h3 class="text-2xl font-bold text-white">
-                                        <a href="https://pharaohfolio.vercel.app/" target="_blank" class="hover:text-secondary transition-colors duration-300">
-                                            Pharaohfolio - Simple Hosting for Portfolios
-                                        </a>
-                                    </h3>
-                                    <span class="text-xs bg-accent/30 text-white px-2 py-1 rounded">August 12, 2025</span>
-                                </div>
-                                <p class="text-gray-300 mb-6">
-                                    <span class="font-semibold">The easiest way to host your AI-generated portfolio — no technical skills required.</span><br>
-                                    Generate your portfolio with ChatGPT, Claude, or any AI assistant, paste the code, and get your live link instantly!<br>
-                                </p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="text-xs bg-green-900/50 px-2 py-1 rounded-full">🤖 AI Code Support</span>
-                                    <span class="text-xs bg-blue-900/50 px-2 py-1 rounded-full">📋 Paste & Deploy</span>
-                                    <span class="text-xs bg-cyan-900/50 px-2 py-1 rounded-full">🌐 Instant Hosting</span>
-                                    <span class="text-xs bg-purple-900/50 px-2 py-1 rounded-full">👁️ Live Preview</span>
-                                    <span class="text-xs bg-yellow-900/50 px-2 py-1 rounded-full">🔐 Secure Auth</span>
-                                    <span class="text-xs bg-pink-900/50 px-2 py-1 rounded-full">📱 Mobile-Optimized</span>
-                                    <span class="text-xs bg-gray-800/50 px-2 py-1 rounded-full">🛡️ Safe Execution</span>
-                                    <span class="text-xs bg-indigo-900/50 px-2 py-1 rounded-full">📊 Analytics</span>
-                                </div>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="text-xs bg-green-900/50 px-2 py-1 rounded-full">Django</span>
-                                    <span class="text-xs bg-blue-900/50 px-2 py-1 rounded-full">React 19</span>
-                                    <span class="text-xs bg-cyan-900/50 px-2 py-1 rounded-full">PostgreSQL</span>
-                                    <span class="text-xs bg-blue-400/50 px-2 py-1 rounded-full">Docker</span>
-                                    <span class="text-xs bg-pink-900/50 px-2 py-1 rounded-full">Tailwind CSS</span>
-                                    <span class="text-xs bg-gray-800/50 px-2 py-1 rounded-full">Monaco Editor</span>
-                                </div>
-                                <div class="flex flex-wrap gap-3">
-                                    <a href="https://pharaohfolio.vercel.app/" target="_blank" 
-                                       class="px-4 py-2 bg-accent hover:bg-accent/80 text-white rounded-lg font-medium text-sm 
-                                              shadow-md transition-all duration-200 flex items-center gap-2">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        Try Pharaohfolio Live
-                                    </a>
-                                    <a href="https://github.com/Imhotep-Tech/Pharaohfolio" target="_blank" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium text-sm shadow-md transition-all duration-200 flex items-center gap-2">
-                                        <i class="fab fa-github"></i> 
-                                        View on GitHub
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ImhotepChef - AI-Powered Culinary Companion -->
-                    <div class="group bg-primary/30 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl border border-gray-700 hover:border-secondary/50 transform hover:-translate-y-1 transition-all duration-300">
-                        <div class="md:flex">
-                            <div class="md:w-1/3 p-6 flex items-center justify-center">
-                                <img src="static/imhotepchef.png" class="w-40 h-40 object-cover rounded-xl shadow-lg group-hover:scale-105 transition-all duration-300" alt="ImhotepChef - AI-Powered Culinary Companion" loading="lazy">
-                            </div>
-                            <div class="md:w-2/3 p-6">
-                                <div class="flex justify-between items-center mb-3">
-                                    <h3 class="text-2xl font-bold text-white">
-                                        <a href="https://imhotep-chef.vercel.app/" target="_blank" class="hover:text-secondary transition-colors duration-300">
-                                            ImhotepChef - AI-Powered Culinary Companion
-                                        </a>
-                                    </h3>
-                                    <span class="text-xs bg-accent/30 text-white px-2 py-1 rounded">August 7, 2025</span>
-                                </div>
-                                <p class="text-gray-300 mb-6">
-                                    Transform your everyday ingredients into extraordinary meals with the power of artificial intelligence. 
-                                    ImhotepChef generates personalized recipes based on whatever ingredients you have available, 
-                                    helping you reduce food waste and discover new culinary adventures.
-                                </p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="text-xs bg-orange-900/50 px-2 py-1 rounded-full">🤖 AI Recipe Generation</span>
-                                    <span class="text-xs bg-green-900/50 px-2 py-1 rounded-full">🔐 JWT Authentication</span>
-                                    <span class="text-xs bg-blue-900/50 px-2 py-1 rounded-full">📱 Progressive Web App</span>
-                                    <span class="text-xs bg-purple-900/50 px-2 py-1 rounded-full">📚 Recipe History</span>
-                                    <span class="text-xs bg-cyan-900/50 px-2 py-1 rounded-full">React + Django</span>
-                                    <span class="text-xs bg-red-900/50 px-2 py-1 rounded-full">Google Gemini AI</span>
-                                </div>
-                                <div class="flex flex-wrap gap-3">
-                                    <a href="https://imhotep-chef.vercel.app/" target="_blank" 
-                                       class="px-4 py-2 bg-accent hover:bg-accent/80 text-white rounded-lg font-medium text-sm 
-                                              shadow-md transition-all duration-200 flex items-center gap-2">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        Try ImhotepChef Live
-                                    </a>
-                                    <a href="https://github.com/Imhotep-Tech/ImhotepChef" target="_blank" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium text-sm shadow-md transition-all duration-200 flex items-center gap-2">
-                                        <i class="fab fa-github"></i> 
-                                        View on GitHub
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Imhotep Currency Converter -->
-                    <div class="group bg-primary/30 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl border border-gray-700 hover:border-secondary/50 transform hover:-translate-y-1 transition-all duration-300">
-                        <div class="md:flex">
-                            <div class="md:w-1/3 p-6 flex items-center justify-center">
-                                <img src="static/icc.png" class="w-40 h-40 object-cover rounded-xl shadow-lg group-hover:scale-105 transition-all duration-300" alt="Imhotep Currency Converter" loading="lazy">
-                            </div>
-                            <div class="md:w-2/3 p-6">
-                                <div class="flex justify-between items-center mb-3">
-                                    <h3 class="text-2xl font-bold text-white">
-                                        <a href="https://imhotepcc.vercel.app/" target="_blank" class="hover:text-secondary transition-colors duration-300">
-                                            Imhotep Currency Converter
-                                        </a>
-                                    </h3>
-                                    <span class="text-xs bg-accent/30 text-white px-2 py-1 rounded">July 4, 2025</span>
-                                </div>
-                                <p class="text-gray-300 mb-6">
-                                    A powerful React-based currency conversion tool with real-time exchange rates powered by the Imhotep Exchange Rates API. 
-                                    Features daily rate updates and a modern, responsive interface perfect for travelers and business owners who need accurate, 
-                                    up-to-date currency information.
-                                </p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="text-xs bg-cyan-900/50 px-2 py-1 rounded-full">React</span>
-                                    <span class="text-xs bg-green-900/50 px-2 py-1 rounded-full">Custom API</span>
-                                    <span class="text-xs bg-blue-900/50 px-2 py-1 rounded-full">Daily Updates</span>
-                                    <span class="text-xs bg-purple-900/50 px-2 py-1 rounded-full">Real-time Rates</span>
-                                </div>
-                                <div class="flex flex-wrap gap-3">
-                                    <a href="https://imhotepcc.vercel.app/" target="_blank" 
-                                       class="px-4 py-2 bg-accent hover:bg-accent/80 text-white rounded-lg font-medium text-sm 
-                                              shadow-md transition-all duration-200 flex items-center gap-2">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        Visit Now
-                                    </a>
-                                    <a href="https://github.com/Imhotep-Tech/ImhotepCurrency" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium text-sm shadow-md transition-all duration-200 flex items-center gap-2" target="_blank">
-                                        <i class="fab fa-github"></i> 
-                                        View on GitHub
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Imhotep Smart Clinic -->
-                    <div class="group bg-primary/30 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl border border-gray-700 hover:border-secondary/50 transform hover:-translate-y-1 transition-all duration-300">
-                        <div class="md:flex">
-                            <div class="md:w-1/3 p-6 flex items-center justify-center">
-                                <img src="https://imhotepsmartclinic.pythonanywhere.com/static/imhotep_clinic.png" class="w-40 h-40 object-cover rounded-xl shadow-lg group-hover:scale-105 transition-all duration-300" alt="Imhotep Smart Clinic App" loading="lazy">
-                            </div>
-                            <div class="md:w-2/3 p-6">
-                                <div class="flex justify-between items-center mb-3">
-                                    <h3 class="text-2xl font-bold text-white">
-                                        <a href="https://imhotepsmartclinic.pythonanywhere.com/" target="_blank" class="hover:text-secondary transition-colors duration-300">
-                                            Imhotep Smart Clinic
-                                        </a>
-                                    </h3>
-                                    <span class="text-xs bg-accent/30 text-white px-2 py-1 rounded">April 24, 2025</span>
-                                </div>
-                                <p class="text-gray-300 mb-6">
-                                    A comprehensive medical practice management system with digital records, appointment scheduling,
-                                     and prescription generation. Features role-based access control, detailed patient records,
-                                      and practice analytics. Built with Django and TailwindCSS, it includes multilingual support.
-                                </p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="text-xs bg-green-900/50 px-2 py-1 rounded-full">Patient Records</span>
-                                    <span class="text-xs bg-blue-900/50 px-2 py-1 rounded-full">Prescriptions</span>
-                                    <span class="text-xs bg-purple-900/50 px-2 py-1 rounded-full">Analytics</span>
-                                    <span class="text-xs bg-red-900/50 px-2 py-1 rounded-full">Multilingual</span>
-                                    <span class="text-xs bg-yellow-900/50 px-2 py-1 rounded-full">PWA</span>
-                                </div>
-                                <div class="flex flex-wrap gap-3">
-                                    <a href="https://imhotepsmartclinic.pythonanywhere.com/" target="_blank" 
-                                       class="px-4 py-2 bg-accent hover:bg-accent/80 text-white rounded-lg font-medium text-sm 
-                                              shadow-md transition-all duration-200 flex items-center gap-2">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        Visit Now
-                                    </a>
-                                    <a href="https://github.com/Imhotep-Tech/imhotep_smart_clinic" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium text-sm shadow-md transition-all duration-200 flex items-center gap-2" target="_blank">
-                                        <i class="fab fa-github"></i> 
-                                        View on GitHub
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Imhotep Tasks -->
-                    <div class="group bg-primary/30 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl border border-gray-700 hover:border-secondary/50 transform hover:-translate-y-1 transition-all duration-300">
-                        <div class="md:flex">
-                            <div class="md:w-1/3 p-6 flex items-center justify-center">
-                                <img src="static/imhotep_tasks.png" class="w-40 h-40 object-cover rounded-xl shadow-lg group-hover:scale-105 transition-all duration-300" alt="Imhotep Polls App" loading="lazy">
-                            </div>
-                            <div class="md:w-2/3 p-6">
-                                <div class="flex justify-between items-center mb-3">
-                                    <h3 class="text-2xl font-bold text-white">
-                                        <a href="https://imhoteptasks.pythonanywhere.com/" target="_blank" class="hover:text-secondary transition-colors duration-300">
-                                            Imhotep Tasks
-                                        </a>
-                                    </h3>
-                                    <span class="text-xs bg-accent/30 text-white px-2 py-1 rounded">March 17, 2025</span>
-                                </div>
-                                <p class="text-gray-300 mb-6">
-                                    Todo List App designed to help users stay organized and productive. Built with Django, the app offers a seamless experience across web, mobile and desktop platforms (via TWA and Electron)
-                                </p>
-                                <div class="flex flex-wrap gap-3">
-                                    <a href="https://imhoteptasks.pythonanywhere.com/download" target="_blank" 
-                                       class="px-4 py-2 bg-accent hover:bg-accent/80 text-white rounded-lg font-medium text-sm 
-                                              shadow-md transition-all duration-200 flex items-center gap-2">
-                                        <i class="fas fa-download"></i>
-                                        Download Now
-                                    </a>
-                                    <a href="https://github.com/Imhotep-Tech/imhotep_tasks" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium text-sm shadow-md transition-all duration-200 flex items-center gap-2" target="_blank">
-                                        <i class="fab fa-github"></i> 
-                                        View on GitHub
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Imhotep Polls -->
-                    <div class="group bg-primary/30 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl border border-gray-700 hover:border-secondary/50 transform hover:-translate-y-1 transition-all duration-300">
-                        <div class="md:flex">
-                            <div class="md:w-1/3 p-6 flex items-center justify-center">
-                                <img src="static/imhotep_polls.png" class="w-40 h-40 object-cover rounded-xl shadow-lg group-hover:scale-105 transition-all duration-300" alt="Imhotep Polls App" loading="lazy">
-                            </div>
-                            <div class="md:w-2/3 p-6">
-                                <div class="flex justify-between items-center mb-3">
-                                    <h3 class="text-2xl font-bold text-white">
-                                        <a href="https://imhoteppolls.pythonanywhere.com/" target="_blank" class="hover:text-secondary transition-colors duration-300">
-                                            Imhotep Polls
-                                        </a>
-                                    </h3>
-                                    <span class="text-xs bg-accent/30 text-white px-2 py-1 rounded">March 1, 2025</span>
-                                </div>
-                                <p class="text-gray-300 mb-6">
-                                    Create, share, and analyze polls with ease - your voice matters!<br>
-                                    A Django-based polling application that allows users to create, manage and share polls with others.
-                                </p>
-                                <div class="flex flex-wrap gap-3">
-                                    <a href="https://imhoteppolls.pythonanywhere.com/" target="_blank" 
-                                       class="px-4 py-2 bg-accent hover:bg-accent/80 text-white rounded-lg font-medium text-sm 
-                                              shadow-md transition-all duration-200 flex items-center gap-2">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        Visit Now
-                                    </a>
-                                    <a href="https://github.com/Imhotep-Tech/imhotep_polls" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium text-sm shadow-md transition-all duration-200 flex items-center gap-2" target="_blank">
-                                        <i class="fab fa-github"></i> 
-                                        View on GitHub
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Imhotep Skills -->
-                    <div class="group bg-primary/30 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl border border-gray-700 hover:border-secondary/50 transform hover:-translate-y-1 transition-all duration-300">
-                        <div class="md:flex">
-                            <div class="md:w-1/3 p-6 flex items-center justify-center">
-                                <img src="static/imhotep_skills.jpeg" class="w-40 h-40 object-cover rounded-xl shadow-lg group-hover:scale-105 transition-all duration-300" alt="Imhotep Skills App" loading="lazy">
-                            </div>
-                            <div class="md:w-2/3 p-6">
-                                <div class="flex justify-between items-center mb-3">
-                                    <h3 class="text-2xl font-bold text-white">
-                                        <a href="https://imhotepskills.pythonanywhere.com/" target="_blank" class="hover:text-secondary transition-colors duration-300">
-                                            Imhotep Skills
-                                        </a>
-                                    </h3>
-                                    <span class="text-xs bg-accent/30 text-white px-2 py-1 rounded">February 12, 2025</span>
-                                </div>
-                                <p class="text-gray-300 mb-6">
-                                    Unlock your full potential with Imhotep Skills! Manage your learning journey with personalized skill suggestions, 
-                                    track your progress, and create your own skill plans. Stay ahead in your career with AI-powered insights.
-                                </p>
-                                <div class="flex flex-wrap gap-3">
-                                    <a href="https://imhotepskills.pythonanywhere.com/" target="_blank" 
-                                       class="px-4 py-2 bg-accent hover:bg-accent/80 text-white rounded-lg font-medium text-sm 
-                                              shadow-md transition-all duration-200 flex items-center gap-2">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        Visit Now
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Imhotep Clinic -->
-                    <div class="group bg-primary/30 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl border border-gray-700 hover:border-secondary/50 transform hover:-translate-y-1 transition-all duration-300">
-                        <div class="md:flex">
-                            <div class="md:w-1/3 p-6 flex items-center justify-center">
-                                <img src="static/imhotepclinic.png" class="w-40 h-40 object-cover rounded-xl shadow-lg group-hover:scale-105 transition-all duration-300" alt="Imhotep Clinic Web App" loading="lazy">
-                            </div>
-                            <div class="md:w-2/3 p-6">
-                                <div class="flex justify-between items-center mb-3">
-                                    <h3 class="text-2xl font-bold text-white">
-                                        <a href="https://www.fiverr.com/kbassem/a-webapp-for-a-small-clinic" target="_blank" class="hover:text-secondary transition-colors duration-300">
-                                            Imhotep Clinic
-                                        </a>
-                                    </h3>
-                                    <span class="text-xs bg-accent/30 text-white px-2 py-1 rounded">DEC 31, 2023</span>
-                                </div>
-                                <p class="text-gray-300 mb-6">
-                                    Are you overwhelmed with clinic paperwork? Imhotep Clinic, built with Flask, is a custom web app to help clinics 
-                                    manage patient records, appointments, and doctor information efficiently. Features include patient management, 
-                                    doctor pricing control, and secure data handling with role-based access.
-                                </p>
-                                <div class="flex flex-wrap gap-3">
-                                    <a href="https://www.fiverr.com/kbassem/a-webapp-for-a-small-clinic" target="_blank" 
-                                       class="px-4 py-2 bg-accent hover:bg-accent/80 text-white rounded-lg font-medium text-sm 
-                                              shadow-md transition-all duration-200 flex items-center gap-2">
-                                        <i class="fas fa-info-circle"></i>
-                                        Learn More
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- First Program -->
-                    <div class="group bg-primary/30 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl border border-gray-700 hover:border-secondary/50 transform hover:-translate-y-1 transition-all duration-300">
-                        <div class="p-6">
-                            <div class="flex justify-between items-center mb-3">
-                                <h3 class="text-2xl font-bold text-white">
-                                    <a href="https://kbassem.pythonanywhere.com/login" target="_blank" class="hover:text-secondary transition-colors duration-300">
-                                        The First Program
-                                    </a>
-                                </h3>
-                                <span class="text-xs bg-accent/30 text-white px-2 py-1 rounded">OCT 19, 2023</span>
-                            </div>
-                            <p class="text-gray-300 mb-6">
-                                This was a Flask application for a clinic, managing patient data and doctor operations with ease.
-                            </p>
-                            <div class="flex flex-wrap gap-3">
-                                <a href="https://kbassem.pythonanywhere.com/login" target="_blank" 
-                                   class="px-4 py-2 bg-accent hover:bg-accent/80 text-white rounded-lg font-medium text-sm 
-                                          shadow-md transition-all duration-200 flex items-center gap-2">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    View Project
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- CTA Section -->
-    <div class="bg-gradient-to-r from-primary to-dark py-16">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-6 text-white">Ready to build something amazing?</h2>
-            <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
-                Whether you need a customer management system, an internal tool, or a web application,
-                we can help turn your vision into reality.
-            </p>
-            <a href="mailto:imhoteptech@outlook.com" 
-               class="px-8 py-4 bg-secondary text-primary hover:bg-secondary/90 rounded-full font-bold text-lg 
-                      shadow-lg hover:shadow-secondary/30 transform hover:-translate-y-1 transition-all duration-300">
-                Get in Touch
-            </a>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-dark border-t border-gray-800 py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <div class="flex items-center mb-6">
-                        <span class="bg-secondary text-primary p-1 rounded mr-2">IT</span>
-                        <span class="text-xl font-bold text-white">Imhotep Tech</span>
-                    </div>
-                    <p class="text-gray-400 mb-4">
-                        &copy; 2023-2025 Imhotep Tech. All rights reserved.
-                    </p>
-                </div>
-                <div class="md:text-right">
-                    <h3 class="text-lg font-semibold text-white mb-4">Connect with us</h3>
-                    <div class="flex md:justify-end gap-4">
-                        <a href="mailto:imhoteptech@outlook.com" class="text-gray-400 hover:text-white transition-colors duration-200">
-                            <i class="fa fa-envelope fa-lg"></i>
-                        </a>
-                        <a href="https://www.instagram.com/imhotep_tech?igsh=YXV0Y24xZnNveDQ5" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-200">
-                            <i class="fab fa-instagram fa-lg"></i>
-                        </a>
-                        <a href="https://x.com/Imhoteptech1?t=E5JmfSp5WpyZaWkDzILpKw&s=09" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-200">
-                            <i class="fab fa-twitter fa-lg"></i>
-                        </a>
-                        <a href="https://github.com/Imhotep-Tech" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-200">
-                            <i class="fab fa-github fa-lg"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Mobile menu script -->
-    <script>
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
-</body>
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
