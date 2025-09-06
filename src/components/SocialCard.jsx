@@ -13,7 +13,7 @@ const SocialCard = ({ platform, index }) => {
 
   return (
     <div 
-      className="group relative bg-gradient-to-br from-primary/40 via-primary/30 to-primary/20 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl border border-gray-700/50 hover:border-secondary/50 transform hover:-translate-y-2 transition-all duration-500 cursor-pointer h-full"
+      className="group relative bg-gradient-to-br from-primary/40 via-primary/30 to-primary/20 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl border border-gray-700/50 hover:border-secondary/50 transform hover:-translate-y-3 hover:scale-[1.02] transition-all duration-700 cursor-pointer h-full"
       style={{ 
         animationDelay: `${index * 150}ms`,
         animationFillMode: 'both'
@@ -22,8 +22,11 @@ const SocialCard = ({ platform, index }) => {
       onMouseLeave={() => setIsHovered(false)}
       onClick={handleCardClick}
     >
-      {/* Animated background glow */}
-      <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      {/* Enhanced animated background glow */}
+      <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+      
+      {/* Animated border glow */}
+      <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-secondary/20 via-accent/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
       
       {/* Floating particles effect */}
       {isHovered && (

@@ -4,7 +4,7 @@ const socialPlatforms = [
     username: "@imhotep_tech",
     url: "https://www.threads.net/@imhotep_tech",
     description: "Follow our threads for quick updates and tech discussions.",
-    icon: "fab fa-threads",
+    icon: "fas fa-comments",
     color: "bg-gray-800 hover:bg-gray-700",
     features: [
       "Quick updates",
