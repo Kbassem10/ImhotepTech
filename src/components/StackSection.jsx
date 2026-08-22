@@ -1,112 +1,156 @@
-import React from 'react';
-import { technicalSkills, additionalTechnologies } from '../data/aboutMe';
+import React, { useState } from 'react';
+import { techStackCategories } from '../data/aboutMe';
 
 const Icon = ({ name, className = "" }) => (
   <i className={`${name} ${className}`} aria-hidden="true" />
 );
 
 const StackSection = () => {
+  const [activeCategory, setActiveCategory] = useState('all');
+
+  const displayedCategories = activeCategory === 'all'
+    ? techStackCategories
+    : techStackCategories.filter(c => c.id === activeCategory);
+
   return (
-    <section id="stack" className="border-t border-slate-200/60 dark:border-slate-800/40 py-24 px-4 sm:px-6 relative overflow-hidden">
+    <section id="stack" className="border-t border-slate-200/60 dark:border-glass-border py-24 px-4 sm:px-6 relative overflow-hidden">
       
       {/* Background Glow */}
-      <div className="pointer-events-none absolute bottom-0 left-1/3 w-[500px] h-[250px] rounded-full bg-cyan-500/[0.03] blur-[100px]" />
+      <div className="pointer-events-none absolute bottom-0 left-1/3 w-[500px] h-[250px] rounded-full bg-primary/[0.04] blur-[100px]" />
+      <div className="pointer-events-none absolute top-10 right-10 w-96 h-96 rounded-full bg-primary-container/[0.03] blur-[120px]" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Section Header */}
-        <div className="mb-14 max-w-3xl animate-fade-in-up">
-          <span className="eyebrow">
-            <Icon name="fas fa-microchip text-amber-500" /> Technology Ecosystem
-          </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mt-3">
-            Core Technical Stack &amp; Skills
-          </h2>
-          <p className="mt-4 text-slate-650 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-            We architect robust software using battle-tested frameworks, modern databases, and clean algorithmic patterns.
-          </p>
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 animate-fade-in-up">
+          <div className="max-w-3xl">
+            <span className="eyebrow text-primary">
+              <Icon name="fas fa-microchip text-primary" /> Technology Ecosystem
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-on-background mt-3">
+              Core Technical Stack &amp; Tooling
+            </h2>
+            <p className="mt-4 text-slate-650 dark:text-on-surface-variant text-sm sm:text-base leading-relaxed">
+              Architecting robust software with battle-tested frameworks, modern databases, and clean algorithmic patterns.
+            </p>
+          </div>
+
+          {/* Quick Category Filter Pills */}
+          <div className="flex items-center gap-1.5 p-1.5 rounded-xl bg-slate-200/80 dark:bg-surface-container border border-slate-300/60 dark:border-glass-border self-start md:self-auto flex-wrap">
+            <button
+              type="button"
+              onClick={() => setActiveCategory('all')}
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                activeCategory === 'all'
+                  ? 'bg-primary text-on-primary shadow-sm'
+                  : 'text-slate-600 dark:text-on-surface-variant hover:text-slate-900 dark:hover:text-on-surface'
+              }`}
+            >
+              All Stack
+            </button>
+            {techStackCategories.map((cat) => (
+              <button
+                key={cat.id}
+                type="button"
+                onClick={() => setActiveCategory(cat.id)}
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                  activeCategory === cat.id
+                    ? 'bg-primary text-on-primary shadow-sm'
+                    : 'text-slate-600 dark:text-on-surface-variant hover:text-slate-900 dark:hover:text-on-surface'
+                }`}
+              >
+                {cat.category.split(' ')[0]}
+              </button>
+            ))}
+          </div>
         </div>
 
-        {/* Dual Bento Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          
-          {/* Bento Card 1: Core Proficiencies */}
-          <div className="glass-card p-6 sm:p-8 rounded-2xl border border-slate-200/60 dark:border-white/10 flex flex-col justify-between">
-            <div>
-              <div className="flex items-center gap-3 mb-6 border-b border-slate-200/50 dark:border-slate-800/60 pb-4">
-                <span className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-500 flex items-center justify-center">
-                  <Icon name="fas fa-gauge-high text-lg" />
-                </span>
-                <div>
-                  <h3 className="font-bold text-slate-900 dark:text-white text-lg">
-                    Primary Frameworks &amp; Languages
-                  </h3>
-                  <span className="text-xs text-slate-500 dark:text-slate-400 font-mono">
-                    Production proficiency metrics
-                  </span>
-                </div>
-              </div>
-
-              <div className="space-y-5">
-                {technicalSkills.map((skill, idx) => (
-                  <div key={idx} className="flex flex-col">
-                    <div className="flex items-center justify-between text-xs sm:text-sm font-semibold mb-2">
-                      <span className="flex items-center gap-2.5 text-slate-800 dark:text-slate-200">
-                        <Icon name={skill.icon || "fas fa-code"} className="text-amber-500 text-sm" />
-                        {skill.name}
+        {/* 4-Pillar Categorized Bento Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+          {displayedCategories.map((pillar) => (
+            <div
+              key={pillar.id}
+              className="glass-panel p-6 sm:p-8 rounded-xl border border-slate-200/60 dark:border-glass-border flex flex-col justify-between hover:-translate-y-1 hover:border-primary/40 transition-all duration-300 group"
+            >
+              <div>
+                {/* Pillar Header */}
+                <div className="flex items-center justify-between gap-4 mb-4 border-b border-slate-200/50 dark:border-glass-border pb-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 text-primary flex items-center justify-center text-lg group-hover:scale-110 group-hover:bg-primary/20 transition-all">
+                      <Icon name={pillar.icon} />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-slate-900 dark:text-on-surface text-lg sm:text-xl">
+                        {pillar.category}
+                      </h3>
+                      <span className="text-[11px] text-slate-500 dark:text-on-surface-variant block">
+                        {pillar.skills.length} Technologies
                       </span>
-                      <span className="font-mono text-amber-600 dark:text-amber-400 font-bold">{skill.level}%</span>
-                    </div>
-                    <div className="w-full h-2.5 bg-slate-200 dark:bg-slate-900 rounded-full overflow-hidden border border-slate-300/40 dark:border-slate-800/40">
-                      <div 
-                        className={`h-full bg-gradient-to-r ${skill.color || "from-amber-500 to-amber-300"} rounded-full transition-all duration-1000`}
-                        style={{ width: `${skill.level}%` }}
-                      />
                     </div>
                   </div>
-                ))}
-              </div>
-            </div>
-          </div>
 
-          {/* Bento Card 2: Ecosystem & Tech Stack Tags */}
-          <div className="glass-card p-6 sm:p-8 rounded-2xl border border-slate-200/60 dark:border-white/10 flex flex-col justify-between">
-            <div>
-              <div className="flex items-center gap-3 mb-6 border-b border-slate-200/50 dark:border-slate-800/60 pb-4">
-                <span className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center">
-                  <Icon name="fas fa-layer-group text-lg" />
-                </span>
-                <div>
-                  <h3 className="font-bold text-slate-900 dark:text-white text-lg">
-                    Databases, CS Fundamentals &amp; Tools
-                  </h3>
-                  <span className="text-xs text-slate-500 dark:text-slate-400 font-mono">
-                    Essential development tooling
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-primary bg-primary/10 border border-primary/20 px-2.5 py-1 rounded-full">
+                    {pillar.tag}
                   </span>
+                </div>
+
+                <p className="text-xs sm:text-sm text-slate-650 dark:text-on-surface-variant leading-relaxed mb-6">
+                  {pillar.description}
+                </p>
+
+                {/* Skill Tiles Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {pillar.skills.map((skill, sIdx) => (
+                    <div
+                      key={sIdx}
+                      className="p-3.5 rounded-xl border border-slate-200/70 dark:border-glass-border bg-slate-100/60 dark:bg-surface-container/60 hover:bg-white dark:hover:bg-surface-container-high hover:border-primary/40 hover:shadow-sm transition-all duration-200 flex items-center gap-3 group/skill"
+                    >
+                      <div className="w-9 h-9 rounded-lg bg-white dark:bg-surface border border-slate-200 dark:border-glass-border text-primary flex items-center justify-center flex-shrink-0 text-base group-hover/skill:scale-110 transition-transform shadow-xs">
+                        <Icon name={skill.icon || "fas fa-code"} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between gap-1">
+                          <span className="font-bold text-xs sm:text-sm text-slate-900 dark:text-on-surface truncate">
+                            {skill.name}
+                          </span>
+                        </div>
+                        <span className="text-[10px] sm:text-[11px] text-slate-500 dark:text-on-surface-variant block truncate">
+                          {skill.role}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {additionalTechnologies.map((tech, idx) => (
-                  <div 
-                    key={idx} 
-                    className="flex items-center gap-3 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100/50 dark:bg-slate-900/40 text-slate-800 dark:text-slate-200 hover:border-amber-500/40 hover:bg-amber-500/5 transition-all duration-200 group"
-                  >
-                    <span className="w-8 h-8 rounded-lg bg-slate-200 dark:bg-slate-800 text-cyan-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Icon name={tech.icon || "fas fa-tag"} className="text-sm" />
-                    </span>
-                    <span className="font-bold text-xs sm:text-sm">{tech.name}</span>
-                  </div>
-                ))}
+              {/* Card Footer Tag */}
+              <div className="mt-6 pt-4 border-t border-slate-200/50 dark:border-glass-border flex items-center justify-between text-[11px] text-slate-500 dark:text-on-surface-variant">
+                <span>Production Standard</span>
+                <span className="text-primary font-semibold flex items-center gap-1">
+                  <Icon name="fas fa-circle-check text-xs" /> Verified Stack
+                </span>
               </div>
             </div>
+          ))}
+        </div>
 
-            <div className="mt-8 pt-6 border-t border-slate-200/50 dark:border-slate-800/60 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 font-mono">
-              <span>Standard: Service-Oriented Architecture</span>
-              <span className="text-emerald-500 font-semibold">Clean Code</span>
-            </div>
+        {/* Bottom Architectural Guarantee Strip */}
+        <div className="mt-12 glass-panel rounded-xl p-5 sm:p-6 border border-slate-200/60 dark:border-glass-border flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+          <div className="flex items-center gap-2 text-slate-700 dark:text-on-surface">
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="font-bold">Architecture:</span>
+            <span className="text-slate-500 dark:text-on-surface-variant">Clean Architecture &amp; SOLID Principles</span>
           </div>
-
+          <div className="flex items-center gap-2 text-slate-700 dark:text-on-surface">
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="font-bold">Deployment:</span>
+            <span className="text-slate-500 dark:text-on-surface-variant">Containerized Docker &amp; Cloud Ready</span>
+          </div>
+          <div className="flex items-center gap-2 text-slate-700 dark:text-on-surface">
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="font-bold">Safety:</span>
+            <span className="text-slate-500 dark:text-on-surface-variant">Defensive Access &amp; Type Resilience</span>
+          </div>
         </div>
 
       </div>

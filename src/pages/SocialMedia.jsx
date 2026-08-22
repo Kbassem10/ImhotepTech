@@ -17,7 +17,7 @@ const SocialMedia = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
   return (
-    <div className="w-full font-sans">
+    <div className="w-full">
       <Navbar currentPage="social-media" />
 
       {/* Page header */}

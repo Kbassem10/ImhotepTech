@@ -33,28 +33,64 @@ const founderInfo = {
   ]
 };
 
-const technicalSkills = [
-  { name: "Flask", level: 80, color: "from-green-500 to-green-400", icon: "fas fa-flask" },
-  { name: "Python", level: 85, color: "from-blue-500 to-blue-400", icon: "fab fa-python" },
-  { name: "HTML/CSS", level: 75, color: "from-yellow-500 to-yellow-400", icon: "fab fa-html5" },
-  { name: "Django", level: 75, color: "from-gray-500 to-gray-400", icon: "fas fa-leaf" },
-  { name: "React", level: 70, color: "from-cyan-500 to-blue-400", icon: "fab fa-react" },
-  { name: "React Native", level: 70, color: "from-cyan-500 to-blue-400", icon: "fas fa-mobile-screen-button" },
-  { name: "JavaScript", level: 70, color: "from-yellow-500 to-yellow-400", icon: "fab fa-js-square" },
-  { name: "Tailwind CSS", level: 65, color: "from-pink-500 to-pink-400", icon: "fas fa-wind" },
-  { name: "PostgreSQL", level: 60, color: "from-blue-500 to-blue-400", icon: "fas fa-database" },
-  { name: "Docker", level: 55, color: "from-blue-500 to-blue-400", icon: "fab fa-docker" },
-  { name: "PWA", level: 50, color: "from-purple-500 to-purple-400", icon: "fas fa-mobile-screen" }
+const techStackCategories = [
+  {
+    id: "backend",
+    category: "Backend & APIs",
+    icon: "fas fa-server",
+    tag: "Core Engineering",
+    description: "Architecting resilient APIs, ORM data layers, and high-performance server logic.",
+    skills: [
+      { name: "Python", icon: "fab fa-python", role: "Primary Language", highlight: "Core Stack" },
+      { name: "Django", icon: "fas fa-leaf", role: "Web Framework & ORM", highlight: "Production Backend" },
+      { name: "Flask", icon: "fas fa-flask", role: "Microservices & APIs", highlight: "REST Services" },
+      { name: "RESTful APIs", icon: "fas fa-network-wired", role: "High-Throughput Endpoints", highlight: "Integration" },
+    ]
+  },
+  {
+    id: "frontend",
+    category: "Frontend & Mobile",
+    icon: "fas fa-laptop-code",
+    tag: "User Experience",
+    description: "Crafting fluid responsive web apps, cross-platform mobile apps, and offline-first PWAs.",
+    skills: [
+      { name: "React", icon: "fab fa-react", role: "Modern Component Architecture", highlight: "Interactive SPA" },
+      { name: "React Native", icon: "fas fa-mobile-screen-button", role: "Cross-Platform Mobile Apps", highlight: "iOS & Android" },
+      { name: "JavaScript (ES6+)", icon: "fab fa-js-square", role: "Client Execution & Async Logic", highlight: "Core Web" },
+      { name: "Tailwind CSS", icon: "fas fa-wind", role: "Modern Design Systems & Tokens", highlight: "Utility-First" },
+      { name: "PWA", icon: "fas fa-mobile-screen", role: "Progressive Web Apps", highlight: "Offline-First" }
+    ]
+  },
+  {
+    id: "data",
+    category: "Databases & Storage",
+    icon: "fas fa-database",
+    tag: "Data Modeling",
+    description: "Structured relational models, query performance, and transactional safety.",
+    skills: [
+      { name: "PostgreSQL", icon: "fas fa-database", role: "Enterprise Relational Database", highlight: "Production DB" },
+      { name: "SQLite3", icon: "fas fa-database", role: "Embedded & Fast Data Storage", highlight: "Reliable" },
+      { name: "Data Modeling", icon: "fas fa-diagram-project", role: "Schema Design & Migrations", highlight: "Normalized" },
+    ]
+  },
+  {
+    id: "devops",
+    category: "DevOps & Core CS",
+    icon: "fas fa-gears",
+    tag: "Infrastructure & Algorithms",
+    description: "Reproducible container environments, version control, and sound computer science algorithms.",
+    skills: [
+      { name: "Docker", icon: "fab fa-docker", role: "Containerized Deployments", highlight: "Isolation" },
+      { name: "Git & GitHub", icon: "fab fa-git-alt", role: "CI/CD & Source Control", highlight: "Workflow" },
+      { name: "Algorithms & CS", icon: "fas fa-brain", role: "Minimax AI & Data Structures", highlight: "Academic CS" },
+      { name: "C / C++", icon: "fas fa-code", role: "Systems Programming Foundations", highlight: "Performance" }
+    ]
+  }
 ];
 
-const additionalTechnologies = [
-  { name: "SQLite3", icon: "fas fa-database" },
-  { name: "PostgreSQL", icon: "fas fa-database" },
-  { name: "C/C++", icon: "fas fa-code" },
-  { name: "Data Structures", icon: "fas fa-sitemap" },
-  { name: "Algorithms", icon: "fas fa-project-diagram" },
-  { name: "Git/GitHub", icon: "fab fa-git-alt" }
-];
+// Flat list for any legacy lookups
+const technicalSkills = techStackCategories.flatMap(c => c.skills);
+const additionalTechnologies = techStackCategories.find(c => c.id === 'devops')?.skills || [];
 
 const notableProjects = [
   {
@@ -190,6 +226,7 @@ const navigationLinks = [
 
 export {
   founderInfo,
+  techStackCategories,
   technicalSkills,
   additionalTechnologies,
   notableProjects,

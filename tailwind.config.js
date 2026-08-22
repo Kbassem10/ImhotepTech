@@ -8,32 +8,67 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Brand
-        primary: '#2e3b4b',
-        secondary: '#ffdd57',
-        accent: '#3b82f6',
+        // Stitch Brand Evolution Tokens
+        primary: {
+          DEFAULT: '#f2ca50',
+          container: '#d4af37',
+          fixed: '#ffe088',
+          'fixed-dim': '#e9c349',
+          on: '#3c2f00',
+          'on-container': '#554300',
+        },
+        'primary-container': '#d4af37',
+        'primary-fixed': '#ffe088',
+        'primary-fixed-dim': '#e9c349',
+        'on-primary': '#3c2f00',
+        'on-primary-container': '#554300',
+        'shimmer-gold': '#F59E0B',
+        'monolith-black': '#020617',
+        'sand-white': '#F8FAFC',
+        'glass-border': 'rgba(255, 255, 255, 0.1)',
 
-        // Surfaces
-        bg: '#0b1220',
-        surface: '#111a2b',
-        'surface-2': '#162134',
-        dark: '#0b1220',
+        // Surface Tones
+        background: '#0c1324',
+        surface: {
+          DEFAULT: '#0c1324',
+          lowest: '#070d1f',
+          low: '#151b2d',
+          container: '#191f31',
+          high: '#23293c',
+          highest: '#2e3447',
+          variant: '#2e3447',
+        },
+        'surface-container-lowest': '#070d1f',
+        'surface-container-low': '#151b2d',
+        'surface-container': '#191f31',
+        'surface-container-high': '#23293c',
+        'surface-container-highest': '#2e3447',
+        'surface-variant': '#2e3447',
 
-        // Text
-        ink: '#e6edf7',
-        muted: '#9aa7bd',
-        subtle: '#6b7891',
+        // Text & On-Colors
+        'on-background': '#dce1fb',
+        'on-surface': '#dce1fb',
+        'on-surface-variant': '#d0c5af',
+        secondary: '#bec6e0',
+        tertiary: '#c3cee6',
 
-        // Lines
-        line: '#1f2a3d',
-
-        // Legacy
-        light: '#f7fafc'
+        // Surfaces & Backwards Compatibility
+        bg: '#0c1324',
+        'surface-2': '#191f31',
+        dark: '#0c1324',
+        ink: '#dce1fb',
+        muted: '#d0c5af',
+        subtle: '#8c97ad',
+        line: '#2e3447',
+        light: '#f8fafc'
       },
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
-        display: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace']
+        serif: ['"Libre Baskerville"', 'Georgia', 'serif'],
+        display: ['"Libre Baskerville"', 'Georgia', 'serif'],
+        headline: ['"Libre Baskerville"', 'Georgia', 'serif'],
+        sans: ['"Libre Baskerville"', 'Georgia', 'serif'],
+        body: ['"Libre Baskerville"', 'Georgia', 'serif'],
+        mono: ['"Libre Baskerville"', 'Georgia', 'serif']
       },
       letterSpacing: {
         tightest: '-0.035em'

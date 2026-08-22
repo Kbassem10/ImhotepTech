@@ -12,18 +12,18 @@
 }
 
 :root.dark {
-  --bg-color: #030712;
-  --text-color: #f8fafc;
-  --focus-ring: 0 0 0 3px rgba(251, 191, 36, 0.4);
+  --bg-color: #0c1324;
+  --text-color: #dce1fb;
+  --focus-ring: 0 0 0 3px rgba(242, 202, 80, 0.4);
   --border-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Fallback/default if JS hasn't loaded or system pref matches */
 @media (prefers-color-scheme: dark) {
   :root:not(.light) {
-    --bg-color: #030712;
-    --text-color: #f8fafc;
-    --focus-ring: 0 0 0 3px rgba(251, 191, 36, 0.4);
+    --bg-color: #0c1324;
+    --text-color: #dce1fb;
+    --focus-ring: 0 0 0 3px rgba(242, 202, 80, 0.4);
     --border-color: rgba(255, 255, 255, 0.1);
   }
 }
@@ -35,14 +35,25 @@
 }
 
 html,
+body,
+#root,
+button,
+input,
+textarea,
+select,
+code,
+kbd,
+pre {
+  font-family: 'Libre Baskerville', Georgia, serif;
+}
+
+html,
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   min-height: 100vh;
-  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
-    Helvetica, Arial, sans-serif;
-  font-feature-settings: 'cv11', 'ss01', 'ss03';
+  font-family: 'Libre Baskerville', Georgia, serif;
   line-height: 1.6;
   font-weight: 400;
   background-color: var(--bg-color);
@@ -63,9 +74,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
-  letter-spacing: -0.025em;
-  line-height: 1.2;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
 }
 
 a {
@@ -228,6 +239,27 @@ button:focus-visible,
 }
 .hover-lift:hover {
   transform: translateY(-4px);
+}
+
+/* Stitch Brand Evolution Classes */
+.glass-panel {
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gold-glow {
+  box-shadow: 0 0 20px -5px rgba(212, 175, 55, 0.2);
+}
+.gold-glow:hover {
+  box-shadow: 0 0 30px -5px rgba(212, 175, 55, 0.4);
+}
+
+.text-gradient-gold {
+  background: linear-gradient(90deg, #f2ca50, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Glassmorphism Archetype styling */

@@ -92,33 +92,35 @@ function App() {
     setTimeout(() => setCopiedItem(null), 2000);
   }, []);
 
-  // Compute stats dynamically to keep real measurements
+  // Compute stats dynamically from the actual projects and libraries dataset
   const computedStats = useMemo(() => {
-    const startDate = new Date('2023-10-19');
-    const diffMs = Date.now() - startDate.getTime();
-    const diffYears = diffMs / (1000 * 60 * 60 * 24 * 365.25);
-    const years = diffYears.toFixed(1);
+    const totalProjects = projects.length;
+    const webAppsCount = projects.filter(p => !p.isLibrary).length;
+    const librariesCount = projects.filter(p => p.isLibrary).length;
+    const openSourceCount = projects.filter(p =>
+      p.buttons && p.buttons.some(b => b.url && b.url.includes('github'))
+    ).length;
 
     return [
       {
         metric: "Projects & Libraries",
-        value: `${projects.length}+`,
-        icon: "fas fa-code-branch",
+        value: `${totalProjects}`,
+        icon: "fas fa-cubes",
       },
       {
-        metric: "Years Building",
-        value: `${years}+`,
-        icon: "fas fa-calendar-check",
+        metric: "Web Applications",
+        value: `${webAppsCount}`,
+        icon: "fas fa-laptop-code",
       },
       {
-        metric: "GitHub Repositories",
-        value: "20+",
+        metric: "Developer Libraries",
+        value: `${librariesCount}`,
+        icon: "fas fa-terminal",
+      },
+      {
+        metric: "Open-Source Repos",
+        value: `${openSourceCount}`,
         icon: "fab fa-github",
-      },
-      {
-        metric: "Enterprise Services",
-        value: "100%",
-        icon: "fas fa-shield-halved",
       }
     ];
   }, []);
@@ -132,7 +134,7 @@ function App() {
   }, []);
 
   return (
-    <div ref={containerRef} className="w-full min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased transition-colors duration-300">
+    <div ref={containerRef} className="w-full min-h-screen bg-slate-50 text-slate-900 dark:bg-background dark:text-on-background antialiased transition-colors duration-300 selection:bg-primary selection:text-on-primary">
       
       {/* Sticky Header Navigation */}
       <HeaderNavbar
@@ -184,9 +186,9 @@ function App() {
           type="button"
           onClick={scrollToTop}
           aria-label="Scroll to top"
-          className="fixed bottom-6 right-6 z-40 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-500 text-slate-950 shadow-lg shadow-amber-500/20 hover:bg-amber-400 active:scale-95 transition-all duration-200"
+          className="fixed bottom-6 right-6 z-40 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary text-on-primary shadow-lg gold-glow hover:bg-primary-container active:scale-95 transition-all duration-200"
         >
-          <Icon name="fas fa-arrow-up text-base font-bold" />
+          <Icon name="fas fa-arrow-up text-sm font-bold" />
         </button>
       )}
 
