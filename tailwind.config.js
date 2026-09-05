@@ -63,12 +63,12 @@ export default {
         light: '#f8fafc'
       },
       fontFamily: {
+        sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+        body: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['"Cinzel"', '"Libre Baskerville"', 'Georgia', 'serif'],
+        headline: ['"Cinzel"', '"Libre Baskerville"', 'Georgia', 'serif'],
         serif: ['"Libre Baskerville"', 'Georgia', 'serif'],
-        display: ['"Libre Baskerville"', 'Georgia', 'serif'],
-        headline: ['"Libre Baskerville"', 'Georgia', 'serif'],
-        sans: ['"Libre Baskerville"', 'Georgia', 'serif'],
-        body: ['"Libre Baskerville"', 'Georgia', 'serif'],
-        mono: ['"Libre Baskerville"', 'Georgia', 'serif']
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
       },
       letterSpacing: {
         tightest: '-0.035em'

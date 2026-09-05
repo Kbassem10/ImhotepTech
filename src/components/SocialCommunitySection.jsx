@@ -73,22 +73,22 @@ const SocialCommunitySection = () => {
               href={platform.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="glass-panel rounded-xl p-6 border border-slate-200/60 dark:border-glass-border flex flex-col justify-between group hover:-translate-y-1 hover:border-primary/40 transition-all"
+              className="glass-panel rounded-2xl p-6 sm:p-7 border border-slate-200/70 dark:border-glass-border flex flex-col justify-between group hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-xl transition-all shadow-md"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-slate-200 dark:bg-surface border border-slate-300 dark:border-glass-border flex items-center justify-center text-slate-900 dark:text-primary group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-slate-200/80 dark:bg-surface border border-slate-300 dark:border-glass-border flex items-center justify-center text-slate-900 dark:text-primary group-hover:scale-110 group-hover:bg-primary/10 transition-all shadow-xs">
                     <Icon name={platform.icon} className="text-2xl" />
                   </div>
-                  <Icon name="fas fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-primary transition-colors" />
+                  <Icon name="fas fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-on-surface tracking-tight">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white tracking-tight">
                   {platform.name}
                 </h3>
-                <span className="text-xs font-semibold text-primary block mt-0.5">
+                <span className="text-xs font-semibold font-mono text-primary block mt-0.5">
                   {platform.username}
                 </span>
-                <p className="mt-2 text-xs sm:text-sm text-slate-650 dark:text-on-surface-variant leading-relaxed">
+                <p className="mt-2.5 text-xs sm:text-sm text-slate-650 dark:text-on-surface-variant leading-relaxed">
                   {platform.description}
                 </p>
               </div>
@@ -101,15 +101,15 @@ const SocialCommunitySection = () => {
           {engagementFeatures.map((feat, idx) => (
             <div
               key={idx}
-              className="glass-panel rounded-xl p-6 border border-slate-200/50 dark:border-glass-border"
+              className="glass-panel rounded-2xl p-6 border border-slate-200/60 dark:border-glass-border shadow-md"
             >
-              <div className="w-10 h-10 rounded-lg bg-slate-200/80 dark:bg-surface border border-slate-300 dark:border-glass-border flex items-center justify-center mb-3 text-primary">
+              <div className="w-10 h-10 rounded-xl bg-slate-200/80 dark:bg-surface border border-slate-300 dark:border-glass-border flex items-center justify-center mb-3.5 text-primary shadow-xs">
                 <Icon name={feat.icon} className="text-base text-primary" />
               </div>
-              <h4 className="font-bold text-slate-900 dark:text-on-surface text-sm">
+              <h4 className="font-bold text-slate-900 dark:text-white text-sm">
                 {feat.title}
               </h4>
-              <p className="mt-1.5 text-xs text-slate-600 dark:text-on-surface-variant leading-relaxed">
+              <p className="mt-2 text-xs text-slate-600 dark:text-on-surface-variant leading-relaxed">
                 {feat.description}
               </p>
             </div>
@@ -117,9 +117,9 @@ const SocialCommunitySection = () => {
         </div>
 
         {/* Live Social Stats Bento Strip */}
-        <div className="glass-panel rounded-xl p-6 sm:p-8 border border-slate-200/60 dark:border-glass-border">
-          <div className="mb-6 border-b border-slate-200/50 dark:border-glass-border pb-3">
-            <span className="text-[11px] font-bold tracking-widest text-primary uppercase">
+        <div className="glass-panel rounded-2xl p-6 sm:p-8 border border-slate-200/70 dark:border-glass-border shadow-xl">
+          <div className="mb-6 border-b border-slate-200/50 dark:border-white/10 pb-4">
+            <span className="text-[11px] font-bold font-mono tracking-widest text-primary uppercase">
               Impact &amp; Metrics
             </span>
             <h3 className="text-xl font-bold text-slate-900 dark:text-on-background mt-1">
@@ -132,7 +132,7 @@ const SocialCommunitySection = () => {
               <div key={idx} className="flex flex-col">
                 <div className="flex items-center gap-2 mb-1">
                   <Icon name={stat.icon} className="text-sm text-primary" />
-                  <span className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-on-background tracking-tight">
+                  <span className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight font-mono">
                     {stat.value}
                   </span>
                 </div>

@@ -16,13 +16,13 @@ const StackSection = () => {
     <section id="stack" className="border-t border-slate-200/60 dark:border-glass-border py-24 px-4 sm:px-6 relative overflow-hidden">
       
       {/* Background Glow */}
-      <div className="pointer-events-none absolute bottom-0 left-1/3 w-[500px] h-[250px] rounded-full bg-primary/[0.04] blur-[100px]" />
+      <div className="pointer-events-none absolute bottom-0 left-1/3 w-[500px] h-[250px] rounded-full bg-primary/[0.04] blur-[110px]" />
       <div className="pointer-events-none absolute top-10 right-10 w-96 h-96 rounded-full bg-primary-container/[0.03] blur-[120px]" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 animate-fade-in-up">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 animate-fade-in-up">
           <div className="max-w-3xl">
             <span className="eyebrow text-primary">
               <Icon name="fas fa-microchip text-primary" /> Technology Ecosystem
@@ -31,7 +31,7 @@ const StackSection = () => {
               Core Technical Stack &amp; Tooling
             </h2>
             <p className="mt-4 text-slate-650 dark:text-on-surface-variant text-sm sm:text-base leading-relaxed">
-              Architecting robust software with battle-tested frameworks, modern databases, and clean algorithmic patterns.
+              Architecting resilient software with battle-tested frameworks, modern relational databases, and clean algorithmic patterns.
             </p>
           </div>
 
@@ -70,26 +70,26 @@ const StackSection = () => {
           {displayedCategories.map((pillar) => (
             <div
               key={pillar.id}
-              className="glass-panel p-6 sm:p-8 rounded-xl border border-slate-200/60 dark:border-glass-border flex flex-col justify-between hover:-translate-y-1 hover:border-primary/40 transition-all duration-300 group"
+              className="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-200/70 dark:border-glass-border flex flex-col justify-between hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-xl transition-all duration-300 group"
             >
               <div>
                 {/* Pillar Header */}
-                <div className="flex items-center justify-between gap-4 mb-4 border-b border-slate-200/50 dark:border-glass-border pb-4">
+                <div className="flex items-center justify-between gap-4 mb-4 border-b border-slate-200/50 dark:border-white/10 pb-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 text-primary flex items-center justify-center text-lg group-hover:scale-110 group-hover:bg-primary/20 transition-all">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 text-primary flex items-center justify-center text-xl group-hover:scale-110 group-hover:bg-primary/20 transition-all shadow-xs">
                       <Icon name={pillar.icon} />
                     </div>
                     <div>
-                      <h3 className="font-bold text-slate-900 dark:text-on-surface text-lg sm:text-xl">
+                      <h3 className="font-bold text-slate-900 dark:text-white text-lg sm:text-xl">
                         {pillar.category}
                       </h3>
-                      <span className="text-[11px] text-slate-500 dark:text-on-surface-variant block">
-                        {pillar.skills.length} Technologies
+                      <span className="text-[11px] font-mono text-slate-500 dark:text-on-surface-variant block mt-0.5">
+                        {pillar.skills.length} Core Technologies
                       </span>
                     </div>
                   </div>
 
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-primary bg-primary/10 border border-primary/20 px-2.5 py-1 rounded-full">
+                  <span className="text-[10px] font-bold font-mono uppercase tracking-wider text-primary bg-primary/10 border border-primary/20 px-2.5 py-1 rounded-full">
                     {pillar.tag}
                   </span>
                 </div>
@@ -114,7 +114,7 @@ const StackSection = () => {
                             {skill.name}
                           </span>
                         </div>
-                        <span className="text-[10px] sm:text-[11px] text-slate-500 dark:text-on-surface-variant block truncate">
+                        <span className="text-[10px] sm:text-[11px] text-slate-500 dark:text-on-surface-variant block truncate mt-0.5">
                           {skill.role}
                         </span>
                       </div>
@@ -124,9 +124,9 @@ const StackSection = () => {
               </div>
 
               {/* Card Footer Tag */}
-              <div className="mt-6 pt-4 border-t border-slate-200/50 dark:border-glass-border flex items-center justify-between text-[11px] text-slate-500 dark:text-on-surface-variant">
+              <div className="mt-6 pt-4 border-t border-slate-200/50 dark:border-white/10 flex items-center justify-between text-[11px] text-slate-500 dark:text-on-surface-variant font-mono">
                 <span>Production Standard</span>
-                <span className="text-primary font-semibold flex items-center gap-1">
+                <span className="text-primary font-semibold flex items-center gap-1.5">
                   <Icon name="fas fa-circle-check text-xs" /> Verified Stack
                 </span>
               </div>
@@ -135,21 +135,21 @@ const StackSection = () => {
         </div>
 
         {/* Bottom Architectural Guarantee Strip */}
-        <div className="mt-12 glass-panel rounded-xl p-5 sm:p-6 border border-slate-200/60 dark:border-glass-border flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
-          <div className="flex items-center gap-2 text-slate-700 dark:text-on-surface">
+        <div className="mt-12 glass-panel rounded-2xl p-5 sm:p-6 border border-slate-200/70 dark:border-glass-border flex flex-col md:flex-row items-center justify-between gap-4 text-xs shadow-md">
+          <div className="flex items-center gap-2.5 text-slate-700 dark:text-on-surface">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="font-bold">Architecture:</span>
-            <span className="text-slate-500 dark:text-on-surface-variant">Clean Architecture &amp; SOLID Principles</span>
+            <span className="text-slate-500 dark:text-on-surface-variant">Clean Service Layer &amp; SOLID Principles</span>
           </div>
-          <div className="flex items-center gap-2 text-slate-700 dark:text-on-surface">
+          <div className="flex items-center gap-2.5 text-slate-700 dark:text-on-surface">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="font-bold">Deployment:</span>
             <span className="text-slate-500 dark:text-on-surface-variant">Containerized Docker &amp; Cloud Ready</span>
           </div>
-          <div className="flex items-center gap-2 text-slate-700 dark:text-on-surface">
+          <div className="flex items-center gap-2.5 text-slate-700 dark:text-on-surface">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="font-bold">Safety:</span>
-            <span className="text-slate-500 dark:text-on-surface-variant">Defensive Access &amp; Type Resilience</span>
+            <span className="font-bold">Resilience:</span>
+            <span className="text-slate-500 dark:text-on-surface-variant">Defensive Access &amp; Type Safety</span>
           </div>
         </div>
 

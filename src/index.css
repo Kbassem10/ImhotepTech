@@ -40,11 +40,14 @@ body,
 button,
 input,
 textarea,
-select,
+select {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
 code,
 kbd,
 pre {
-  font-family: 'Libre Baskerville', Georgia, serif;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
 }
 
 html,
@@ -53,7 +56,7 @@ body {
   padding: 0;
   width: 100%;
   min-height: 100vh;
-  font-family: 'Libre Baskerville', Georgia, serif;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   font-weight: 400;
   background-color: var(--bg-color);
@@ -69,14 +72,19 @@ body {
 
 /* ---------- Typography ---------- */
 h1,
-h2,
+h2 {
+  font-family: 'Cinzel', 'Libre Baskerville', Georgia, serif;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'Libre Baskerville', Georgia, serif;
-  letter-spacing: -0.015em;
-  line-height: 1.25;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
 }
 
 a {
@@ -243,17 +251,26 @@ button:focus-visible,
 
 /* Stitch Brand Evolution Classes */
 .glass-panel {
-  background: rgba(30, 41, 59, 0.4);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(14, 22, 38, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+}
+
+.light .glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), inset 0 1px 0 0 rgba(255, 255, 255, 0.9);
 }
 
 .gold-glow {
-  box-shadow: 0 0 20px -5px rgba(212, 175, 55, 0.2);
+  box-shadow: 0 0 24px -4px rgba(242, 202, 80, 0.25);
 }
 .gold-glow:hover {
-  box-shadow: 0 0 30px -5px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 0 36px -4px rgba(242, 202, 80, 0.45);
 }
 
 .text-gradient-gold {
