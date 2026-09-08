@@ -42,7 +42,7 @@ const baseProjects = [
     },
     {
       title: "Loyalty Program — Full-Stack Web Application",
-      url: "https://7csloyal.vercel.app/",
+      url: "https://loyalty.7-cylinders.com/",
       date: "Feb 23, 2026",
       description: "Full-stack loyalty platform for a multi-branch car services company in Egypt, built in two weeks with Django REST Framework and React 19.",
       features: [
@@ -67,7 +67,7 @@ const baseProjects = [
       buttons: [
         {
           text: "View Live",
-          url: "https://7csloyal.vercel.app/",
+          url: "https://loyalty.7-cylinders.com/",
           style: "bg-accent hover:bg-accent/80",
           icon: "fas fa-external-link-alt"
         }
@@ -75,7 +75,7 @@ const baseProjects = [
     },
     {
       title: "Imhotep Financial Manager",
-      url: "https://imhotep-finance.vercel.app/",
+      url: "https://finance.imhotep-tech.com/",
       date: "June 14, 2026",
       description: (
         <>
@@ -104,7 +104,7 @@ const baseProjects = [
       buttons: [
         {
           text: "Try Web Live",
-          url: "https://imhotep-finance.vercel.app/",
+          url: "https://finance.imhotep-tech.com/",
           style: "bg-accent hover:bg-accent/80",
           icon: "fas fa-external-link-alt"
         },
