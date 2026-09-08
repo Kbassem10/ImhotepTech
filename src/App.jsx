@@ -81,7 +81,7 @@ function App() {
   };
 
   const handleCopyEmail = useCallback(() => {
-    navigator.clipboard.writeText("imhoteptech@outlook.com");
+    navigator.clipboard.writeText("contact@imhotep-tech.com");
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
   }, []);
