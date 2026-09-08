@@ -91,7 +91,7 @@ const Home = () => {
         title="Imhotep Tech - Custom Software Development & Web Applications | Egypt"
         description="Independent software studio based in Egypt. We design and build dependable web apps, business automation and APIs end-to-end."
         keywords="custom software development, web application development, Egypt software company, Django, React, Python, business automation, Imhotep Tech"
-        canonical="https://imhoteptech.vercel.app/"
+        canonical="https://imhotep-tech.com/"
       />
 
       <div className="relative w-full">
