@@ -7,7 +7,7 @@ const founderInfo = {
     "Founder of Imhotep Tech, focused on delivering accessible technology solutions through custom software, APIs, and libraries that solve real business challenges."
   ],
   contact: {
-    email: "k.bassem2397@nu.edu.eg",
+    email: "k.bassem@imhotep-tech.com",
     location: "Cairo, Egypt",
     university: "Nile University (NU)"
   },
@@ -113,7 +113,7 @@ const notableProjects = [
       { name: "Docker", color: "bg-blue-400/50" }
     ],
     buttons: [
-      { text: "Try It Live", url: "https://imhotep-finance.vercel.app/", icon: "fas fa-external-link-alt" },
+      { text: "Try It Live", url: "https://finance.imhotep-tech.com/", icon: "fas fa-external-link-alt" },
       { text: "Play Store", url: "https://play.google.com/store/apps/details?id=com.imhoteptech.imhotep_finance", icon: "fab fa-google-play" },
       { text: "View on GitHub", url: "https://github.com/Imhotep-Tech/imhotep_finance", icon: "fab fa-github" }
     ]
